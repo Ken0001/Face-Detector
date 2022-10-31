@@ -20,10 +20,16 @@ FaceDetector = FaceDetector()
 FaceDetector.inference(img_path="your/image/path")
 ```
 
-* You can change result path or other argument when initial constructor, please see line 14 in ```detector.py```
+* You can change result path or other argument when initial constructor, please see line 14 in ```detector.py```.
 ```python
 FaceDetector = FaceDetector(result_path="results")
 ```
+
+* ```inference()``` will return boxes data so you can use it in your code.
+```python
+boxes = FaceDetector.inference(img_path="your/image/path")
+```
+
 ---
 ## Result
 * Terminal Output

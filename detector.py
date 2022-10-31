@@ -68,6 +68,7 @@ class FaceDetector():
             cv2.imwrite(os.path.join(self.result_path, file_name), ori_image)
         sum += boxes.shape[0]
         print(f"Total {sum} faces.\n")
+        return boxes
 
     def model_predict(self, width, height, confidences, boxes, prob_threshold, iou_threshold=0.3, top_k=-1):
         boxes = boxes[0]
@@ -103,6 +104,7 @@ if __name__ == "__main__":
     parser.add_argument('--img_path', type=str)
     args = parser.parse_args()
 
-    FaceDetector = FaceDetector()
+    FaceDetector = FaceDetector(result_path="results")
     img_path = args.img_path
-    FaceDetector.inference(img_path=img_path)
+    boxes = FaceDetector.inference(img_path=img_path)
+    print(boxes)

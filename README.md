@@ -4,16 +4,24 @@
 
 ## Installation
 1. Download Repository
-```git clone https://github.com/Ken0001/Face-Detector.git```
+
+    ```$ git clone https://github.com/Ken0001/Face-Detector.git```
+
 2. Install Python Package
-```pip install -r requirements.txt```
+
+    ```$ pip install -r requirements.txt```
+
 ---
 ## Usage
 ```python
+from detector import FaceDetector
+
 FaceDetector = FaceDetector()
 FaceDetector.inference(img_path="your/image/path")
+```
 
-# You can choose result path when initial constructor
+* You can change result path or other argument when initial constructor, please see line 14 in ```detector.py```
+```python
 FaceDetector = FaceDetector(result_path="results")
 ```
 ---

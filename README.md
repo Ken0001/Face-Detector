@@ -49,4 +49,4 @@ Total 3 faces.
 
 * Example Result
 
-![img2](https://github.com/Ken0001/Face-Detector/blob/main/1.jpg)
+<img src="https://github.com/Ken0001/Face-Detector/blob/main/results/1.jpg" width="480">
